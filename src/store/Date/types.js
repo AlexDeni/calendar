@@ -1,0 +1,2 @@
+export const OPEN_MODAL_DATE = 'OPEN_MODAL_DATE';
+export const CLOSE_MODAL_DATE  = 'CLOSE_MODAL_DATE ';

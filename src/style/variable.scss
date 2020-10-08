@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+//шрифт по умолчанию
+$fontFamily: "Open Sans";
+
+//цвета
+$yellow: #fdd000;
+$black: #000;
+
+//переменные
+$minWidth: 360px;
+$md1: 2560px;
+$md2: 964px;
+$md3: 768px;
+$md4: 479.98px;
+$mw2: 1200px;
+$md5: 600px;
+
+//общие параметры
+*{margin: 0; padding: 0; border: 0;}
+*:before, *:after{box-sizing: border-box}
+:focus, :active{outline: none}
+aside,nav,header,footer,section{display: block;}
+html,body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: $minWidth;
+  position: relative;
+  color: $black;
+}
+body{
+  font-family: $fontFamily;
+  line-height: 1;
+  font-size: 16px;
+  overflow:  hidden;
+}
+
+.container2{
+  max-width: $md2;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media (max-width: $md3) {max-width: 768px;}
+  @media (max-width: $md4) {max-width: none; padding: 0 10px}
+}
+
+.container{
+  max-width: $mw2;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media (max-width: $md3) {
+    max-width: 768px;
+    padding: 0 20px;
+  }
+  @media (max-width: $md4) {max-width: none; padding: 0 10px}
+}
+
+
+
+.container_padding{
+  padding: 155px 0;
+  @media (max-width: $md3) {
+    padding: 115px 0;
+  }
+  @media (max-width: $md5) {
+    padding: 75px 0;
+  }
+}
+
+//миксины
+@mixin flexbox(){
+  display:flex;
+}
+
+

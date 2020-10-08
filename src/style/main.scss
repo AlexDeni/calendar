@@ -1,0 +1,195 @@
+@import "variable";
+
+/*header*/
+header{
+  padding: 35px 0;
+  @media (max-width: $md2) {
+    padding: 15px 0;
+  }
+  @media (max-width: $md3) {
+    padding: 15px 0;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    .logo img{
+      width: 100px;
+      height: 35px;
+    }
+    .nav_header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a{
+        color: #000000;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:first-child{
+          margin: 0 30px;
+        }
+        &:hover{
+          color: $yellow;
+        }
+      }
+
+    }
+  }
+}
+
+/*main block*/
+.main_block{
+  width: 100%;
+  background-color: #272829;
+  .meeting_date{
+    display: flex;
+    text-align: right;
+    @media (max-width: $md3) {
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+    }
+    .meeting_block{
+      background-image: url('./../static/background.jpg');
+      width: 100%;
+      min-height: 300px;
+      background-size: cover;
+      background-position: top;
+      padding: 80px 35px;
+      @media (max-width: $md2) {
+        background-position: initial;
+        min-height: 250px;
+      }
+      @media (max-width: $md3) {
+        padding: 20px 0;
+        min-height: 100px;
+      }
+      h3{
+        font-size: 38px;
+        color: $yellow;
+        text-transform: uppercase;
+        line-height: 1.3;
+        font-weight: 600;
+        @media (max-width: $md2) {
+          font-size: 28px;
+        }
+      }
+      p{
+        color: white;
+        font-size: 14px;
+        margin-top: 40px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+.calendar_block{
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  @media (max-width: $md2) {
+    min-width: 350px;
+  }
+  @media (max-width: $md3) {
+    padding: 20px 0;
+  }
+  .calendar_block_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 280px;
+    border-bottom: 1px solid #969595;
+    padding-bottom: 10px;
+    color: white;
+    .calendar_month{
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+    }
+    button{
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .calendar_block_day{
+    border-spacing: 12px 7px;
+    .calendar_date{
+      color: #e3e2e2;
+      padding: 7px 7px;
+      font-size: 15px;
+      text-align: center;
+      &:hover{
+        background-color: #fdd000;
+        color: #272829;
+        cursor: pointer;
+      }
+    }
+  }
+  tfoot {
+    border-top: 1px solid lightgrey;
+    .calendar_week_name {
+      text-align: center;
+      color: #e3e2e2;
+      border-top: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+ }
+
+
+/*modal*/
+.modal_block{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #8080805e;
+  .modal_window{
+    margin: 10% auto;
+    background-color: white;
+    width: 350px;
+    min-height: 120px;
+    position: relative;
+    .close_modal_btn{
+      font-size: 25px;
+      width: 30px;
+      right: 0;
+      position: absolute;
+      cursor: pointer;
+      &:hover{
+        color: $yellow;
+        background-color: #434343;
+      }
+    }
+    .modal_window_content{
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-evenly;
+      .modal_input_info{
+        p{
+          margin-bottom: 10px;
+          color: darkgrey;
+        }
+        input{
+          border: 2px solid $yellow;
+          font-size: 16px;
+          padding: 5px 10px;
+          font-weight: bold;
+          color: #606060;
+          box-sizing: border-box;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+}
